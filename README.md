@@ -53,6 +53,14 @@ xattr /Applications/Aseprite.app
 xattr -r -d /Applications/Aseprite.app
 ```
 
+### Add to Path environment variable
+
+- `aseprite` binary executable is also a command-line tool so it's possible to add it to PATH.
+
+```bash
+export PATH="$PATH:/Applications/Aseprite.app/Contents/MacOS/"
+```
+
 ## Reference
 
 - x86 cpu macOS: https://github.com/haxpor/aseprite-macos-buildsh
