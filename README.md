@@ -42,11 +42,22 @@ mv $TARGET/aseprite Aseprite.app/Contents/MacOS
 mv $TARGET/data Aseprite.app/Contents/Resources
 mv Aseprite.app /Applications
 ```
+### Avoid damaged App
+
+- Check `com.apple.quarantine`
+```
+xattr /Applications/Aseprite.app
+```
+- Remove `com.apple.quarantine`
+```
+xattr -r -d /Applications/Aseprite.app
+```
 
 ## Reference
 
 - x86 cpu macOS: https://github.com/haxpor/aseprite-macos-buildsh
     - It's sort of outdated now.
+- https://www.newverse.wiki/knows/aseprite/
 - `INSTALL.md` in Aseprite repo: https://github.com/aseprite/aseprite/blob/main/INSTALL.md#macos-details
 
 ## How about LibreSprite
